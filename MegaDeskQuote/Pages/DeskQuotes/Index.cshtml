@@ -1,0 +1,140 @@
+﻿@page
+@model MegaDeskQuote.Pages.DeskQuotes.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<div class="container-fluid principal">
+    <h1>Quotes</h1>
+
+    <p>
+        <a class="btn btn-success" asp-page="Create">Create New</a>
+        <a class="btn btn-warning" asp-page="./Index">Clear filters</a>
+    </p>
+    <form>
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="input-group">
+                    <div class="input-group-append">
+                        <input type="text" name="SearchCustomer" class="form-control" placeholder="Book" value="@Model.CustomerFilter" />
+                    </div>
+                    <button type="submit" class="btn btn-success">Filter</button>
+
+                </div>
+            </div>
+          
+
+
+        </div>
+    </form>
+
+    <div class="row result">
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead class="border-bottom">
+                <thead>
+                    <tr>
+                        <th>
+                            <a asp-page="./Index" asp-route-sortOrder="@Model.NameSort"
+                               asp-route-customerFilter="@Model.CustomerFilter" >
+                                @Html.DisplayNameFor(model => model.DeskQuote[0].Customer)
+                            </a>
+                        </th>
+                        <th>
+                            <a asp-page="./Index" asp-route-sortOrder="@Model.DateSort"
+                               asp-route-customerFilter="@Model.CustomerFilter">
+                                @Html.DisplayNameFor(model => model.DeskQuote[0].DateQuote)
+                            </a>
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.DeskQuote[0].Width)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.DeskQuote[0].Heigth)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.DeskQuote[0].CostSize)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.DeskQuote[0].TotalSize)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.DeskQuote[0].SizeOverage)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.DeskQuote[0].DrawerCost)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.DeskQuote[0].Material)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.DeskQuote[0].MaterialCost)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.DeskQuote[0].ShippingMethod)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.DeskQuote[0].ShippingCost)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.DeskQuote[0].Total)
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.DeskQuote) {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Customer)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DateQuote)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Width)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Heigth)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.CostSize)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.TotalSize)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.SizeOverage)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DrawerCost)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Material)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.MaterialCost)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ShippingMethod)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ShippingCost)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Total)
+                        </td>
+                        <td>
+                            <a class="btn btn-primary" asp-page="./Edit" asp-route-id="@item.ID">Edit</a>
+                            <a class="btn btn-info" asp-page="./Details" asp-route-id="@item.ID">Details</a>
+                            <a class="btn btn-danger" asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+                        </td>
+                    </tr>
+}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
