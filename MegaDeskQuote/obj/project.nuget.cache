@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7DZva8Sv4C/RIewuTT+5ShS/9h+trwTPl1FQOmHs4usr2z3o/0hTAiZVPlE/wberx/E1ZEboc+UuM8ocpucuRQ==",
+  "dgSpecHash": "8kHnT79l8ljqNa7sGuRYMmrUBHSMxMApd0CcL0JtWJum2T1NmEISNZIKd0eWNqN21aahP5JeJ0Xz+otv6THbeg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\David Vera\\source\\repos\\CIT365-S2020-VERAHUGO\\MegaDeskQuote\\MegaDeskQuote\\MegaDeskQuote.csproj",
+  "projectFilePath": "C:\\Users\\David Vera\\source\\repos\\MegaDeskQuote\\MegaDeskQuote\\MegaDeskQuote.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\David Vera\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\David Vera\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",

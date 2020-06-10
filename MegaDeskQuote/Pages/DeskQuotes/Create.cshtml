@@ -31,9 +31,9 @@
                         <span asp-validation-for="DeskQuote.Width" class="text-danger"></span>
                     </div>
                     <div class="form-group">
-                        <label asp-for="DeskQuote.Heigth" class="control-label"></label>
-                        <input asp-for="DeskQuote.Heigth" class="form-control" />
-                        <span asp-validation-for="DeskQuote.Heigth" class="text-danger"></span>
+                        <label asp-for="DeskQuote.Depth" class="control-label"></label>
+                        <input asp-for="DeskQuote.Depth" class="form-control" />
+                        <span asp-validation-for="DeskQuote.Depth" class="text-danger"></span>
                     </div>
                     <div class="form-group">
                         <label asp-for="DeskQuote.Drawers" class="control-label"></label>
@@ -53,11 +53,11 @@
                 </div>
 
 
-                <div class="col-md-4">
+                @*<div class="col-md-4">*@
 
 
 
-                    <div class="form-group">
+                    @*<div class="form-group">
                         <label asp-for="DeskQuote.CostSize" class="control-label"></label>
                         <input asp-for="DeskQuote.CostSize" class="form-control" />
                         <span asp-validation-for="DeskQuote.CostSize" class="text-danger"></span>
@@ -93,13 +93,14 @@
                         <label asp-for="DeskQuote.Total" class="control-label"></label>
                         <input asp-for="DeskQuote.Total" class="form-control" />
                         <span asp-validation-for="DeskQuote.Total" class="text-danger"></span>
-                    </div>
+                    </div>*@
+            </div>
                     <div class="form-group">
                         <input type="submit" value="Create" class="btn btn-primary" />
                         <a class="btn btn-warning" asp-page="Index">Back to List</a>
                     </div>
-                </div>
-            </div>
+                @*</div>*@
+            
         </form>
     </div>
 </div>

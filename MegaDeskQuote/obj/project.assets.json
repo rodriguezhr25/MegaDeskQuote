@@ -8594,11 +8594,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\David Vera\\source\\repos\\CIT365-S2020-VERAHUGO\\MegaDeskQuote\\MegaDeskQuote\\MegaDeskQuote.csproj",
+      "projectUniqueName": "C:\\Users\\David Vera\\source\\repos\\MegaDeskQuote\\MegaDeskQuote\\MegaDeskQuote.csproj",
       "projectName": "MegaDeskQuote",
-      "projectPath": "C:\\Users\\David Vera\\source\\repos\\CIT365-S2020-VERAHUGO\\MegaDeskQuote\\MegaDeskQuote\\MegaDeskQuote.csproj",
+      "projectPath": "C:\\Users\\David Vera\\source\\repos\\MegaDeskQuote\\MegaDeskQuote\\MegaDeskQuote.csproj",
       "packagesPath": "C:\\Users\\David Vera\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\David Vera\\source\\repos\\CIT365-S2020-VERAHUGO\\MegaDeskQuote\\MegaDeskQuote\\obj\\",
+      "outputPath": "C:\\Users\\David Vera\\source\\repos\\MegaDeskQuote\\MegaDeskQuote\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\David Vera\\AppData\\Roaming\\NuGet\\NuGet.Config",
