@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\hecto\\source\\repos\\MegaDeskQuote\\MegaDeskQuote\\MegaDeskQuote.csproj": {}
+    "C:\\Users\\David Vera\\source\\repos\\CIT365-S2020-VERAHUGO\\MegaDeskQuote\\MegaDeskQuote\\MegaDeskQuote.csproj": {}
   },
   "projects": {
-    "C:\\Users\\hecto\\source\\repos\\MegaDeskQuote\\MegaDeskQuote\\MegaDeskQuote.csproj": {
+    "C:\\Users\\David Vera\\source\\repos\\CIT365-S2020-VERAHUGO\\MegaDeskQuote\\MegaDeskQuote\\MegaDeskQuote.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hecto\\source\\repos\\MegaDeskQuote\\MegaDeskQuote\\MegaDeskQuote.csproj",
+        "projectUniqueName": "C:\\Users\\David Vera\\source\\repos\\CIT365-S2020-VERAHUGO\\MegaDeskQuote\\MegaDeskQuote\\MegaDeskQuote.csproj",
         "projectName": "MegaDeskQuote",
-        "projectPath": "C:\\Users\\hecto\\source\\repos\\MegaDeskQuote\\MegaDeskQuote\\MegaDeskQuote.csproj",
-        "packagesPath": "C:\\Users\\hecto\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hecto\\source\\repos\\MegaDeskQuote\\MegaDeskQuote\\obj\\",
+        "projectPath": "C:\\Users\\David Vera\\source\\repos\\CIT365-S2020-VERAHUGO\\MegaDeskQuote\\MegaDeskQuote\\MegaDeskQuote.csproj",
+        "packagesPath": "C:\\Users\\David Vera\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\David Vera\\source\\repos\\CIT365-S2020-VERAHUGO\\MegaDeskQuote\\MegaDeskQuote\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\hecto\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\David Vera\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -75,7 +75,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
         }
       }
     }
