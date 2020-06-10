@@ -10,6 +10,7 @@ namespace MegaDeskQuote.Models
         [Required, StringLength(60, MinimumLength = 3)]
         public string Customer { get; set; }
 
+
         [Display(Name = "Date Quote"), DataType(DataType.Date), Required]
         public DateTime DateQuote { get; set; }
         [Column(TypeName = "decimal(18, 2)")]
