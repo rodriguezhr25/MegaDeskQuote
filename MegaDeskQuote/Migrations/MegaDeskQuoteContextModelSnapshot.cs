@@ -37,14 +37,14 @@ namespace MegaDeskQuote.Migrations
                     b.Property<DateTime>("DateQuote")
                         .HasColumnType("datetime2");
 
+                    b.Property<decimal>("Depth")
+                        .HasColumnType("decimal(18, 2)");
+
                     b.Property<decimal>("DrawerCost")
                         .HasColumnType("decimal(18, 2)");
 
                     b.Property<int>("Drawers")
                         .HasColumnType("int");
-
-                    b.Property<decimal>("Heigth")
-                        .HasColumnType("decimal(18, 2)");
 
                     b.Property<string>("Material")
                         .HasColumnType("nvarchar(max)");

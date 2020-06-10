@@ -16,7 +16,7 @@ namespace MegaDeskQuote.Models
         [Column(TypeName = "decimal(18, 2)")]
         public decimal Width { get; set; }
         [Column(TypeName = "decimal(18, 2)")]
-        public decimal Heigth { get; set; }
+        public decimal Depth { get; set; }
         [Display(Name = "Cost Size"), DataType(DataType.Currency)]
         [Column(TypeName = "decimal(18, 2)")]
         public decimal CostSize { get; set; }

@@ -16,7 +16,7 @@ namespace MegaDeskQuote.Migrations
                     Customer = table.Column<string>(maxLength: 60, nullable: false),
                     DateQuote = table.Column<DateTime>(nullable: false),
                     Width = table.Column<decimal>(type: "decimal(18, 2)", nullable: false),
-                    Heigth = table.Column<decimal>(type: "decimal(18, 2)", nullable: false),
+                    Depth = table.Column<decimal>(type: "decimal(18, 2)", nullable: false),
                     CostSize = table.Column<decimal>(type: "decimal(18, 2)", nullable: false),
                     TotalSize = table.Column<decimal>(type: "decimal(18, 2)", nullable: false),
                     SizeOverage = table.Column<decimal>(type: "decimal(18, 2)", nullable: false),
