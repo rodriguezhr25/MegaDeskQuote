@@ -35,11 +35,97 @@ namespace MegaDeskQuote.Pages.DeskQuotes
             {
                 return Page();
             }
+            DeskQuote.TotalSize = DeskQuote.Width * DeskQuote.Depth;
 
+            //
+            int cost = 0;
+            switch (DeskQuote.Material)
+                
+            {
+                case "Oak":
+
+                    cost = 200;
+
+                    break;
+                case "Laminate":
+
+                    cost = 100;
+
+                    break;
+                case "Pine":
+
+                    cost = 50;
+
+                    break;
+                case "Rosewood":
+
+                    cost = 300;
+
+                    break;
+                case "Veneer":
+
+                    cost = 125;
+
+                    break;
+            }
+
+            int cost1 = 0;
+
+            decimal TotalSizeDesk = DeskQuote.TotalSize;
+
+            switch (DeskQuote.RushDay)
+
+            {
+                case 3:
+
+                    if ( TotalSizeDesk < 1000)
+
+                        cost1 = 60;
+
+                    else if (TotalSizeDesk < 2001)
+                        cost1 = 70;
+
+                    else cost1 = 80;
+
+                    break;
+                case 5:
+
+                    if (TotalSizeDesk < 1000)
+
+                        cost1 = 40;
+
+                    else if (TotalSizeDesk < 2001)
+                        cost1 = 50;
+
+                    else cost1 = 60;
+
+                    break;
+                case 7:
+
+                    if (TotalSizeDesk < 1000)
+
+                        cost1 = 30;
+
+                    else if (TotalSizeDesk < 2001)
+                        cost1 = 35;
+
+                    else cost1 = 40;
+
+                    break;
+                case 14:
+
+                    cost1 = 0;
+
+                    break;
+            }
+
+            //return cost1;
+
+        
             _context.DeskQuote.Add(DeskQuote);
-            await _context.SaveChangesAsync();
+                await _context.SaveChangesAsync();
 
-            return RedirectToPage("./Index");
+                return RedirectToPage("./Index");
         }
     }
 }
