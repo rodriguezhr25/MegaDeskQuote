@@ -42,7 +42,7 @@ namespace MegaDeskQuote.Migrations
                     b.Property<decimal>("DrawerCost")
                         .HasColumnType("decimal(18, 2)");
 
-                    b.Property<decimal>("Heigth")
+                    b.Property<decimal>("Depth")
                         .HasColumnType("decimal(18, 2)");
 
                     b.Property<string>("Material")
