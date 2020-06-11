@@ -120,7 +120,7 @@ namespace MegaDeskQuote.Pages.DeskQuotes
             }
 
             //return cost1;
-
+            //DeskQuote.Customer ="TEST";
         
             _context.DeskQuote.Add(DeskQuote);
                 await _context.SaveChangesAsync();
