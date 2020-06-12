@@ -46,8 +46,8 @@ namespace MegaDeskQuote.Migrations
                     b.Property<int>("Drawers")
                         .HasColumnType("int");
 
-                    b.Property<string>("Material")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("Material")
+                        .HasColumnType("int");
 
                     b.Property<decimal>("MaterialCost")
                         .HasColumnType("decimal(18, 2)");

@@ -51,7 +51,8 @@ namespace MegaDeskQuote.Models
         public decimal DrawerCost { get; set; }
 
         //
-        public string Material { get; set; }
+        //public string Material { get; set; }
+
         [Display(Name = "Material Cost"), DataType(DataType.Currency)]
         [Column(TypeName = "decimal(18, 2)")]
 
@@ -60,7 +61,7 @@ namespace MegaDeskQuote.Models
         [Display(Name = "Shipping Method ")]
 
 
-        public int RushDay { get; set; }
+        //public int RushDay { get; set; }
         //
         public string ShippingMethod { get; set; }
         [Display(Name = "Shipping Cost") , DataType(DataType.Currency)]
@@ -70,5 +71,30 @@ namespace MegaDeskQuote.Models
         public decimal ShippingCost { get; set; }
         [Column(TypeName = "decimal(18, 2)")]
         public decimal Total { get; set; }
+
+        //type of materials enumerated
+        [EnumDataType(typeof(TMaterials))]
+        public TMaterials Material { get; set; }
+        public enum TMaterials
+        {
+            Oak = 1,
+            Laminate = 2,
+            Pine = 3,
+            Rosewood = 4,
+            Veneer = 5
+        }
+
+
+        //rush order days
+        [EnumDataType(typeof(OptShipping))]
+        public OptShipping RushDay { get; set; }
+        public enum OptShipping
+        {
+            Three = 3,
+            Five = 5,
+            Seven = 7,
+            Fourteen = 14
+        }
+
     }
 }

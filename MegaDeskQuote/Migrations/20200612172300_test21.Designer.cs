@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MegaDeskQuote.Migrations
 {
     [DbContext(typeof(MegaDeskQuoteContext))]
-    [Migration("20200612135106_test8")]
-    partial class test8
+    [Migration("20200612172300_test21")]
+    partial class test21
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -48,8 +48,8 @@ namespace MegaDeskQuote.Migrations
                     b.Property<int>("Drawers")
                         .HasColumnType("int");
 
-                    b.Property<string>("Material")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("Material")
+                        .HasColumnType("int");
 
                     b.Property<decimal>("MaterialCost")
                         .HasColumnType("decimal(18, 2)");
