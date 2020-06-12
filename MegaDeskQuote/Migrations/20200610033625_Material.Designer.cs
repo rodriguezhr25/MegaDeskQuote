@@ -4,14 +4,16 @@ using MegaDeskQuote.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace MegaDeskQuote.Migrations
 {
     [DbContext(typeof(MegaDeskQuoteContext))]
-    partial class MegaDeskQuoteContextModelSnapshot : ModelSnapshot
+    [Migration("20200610033625_Material")]
+    partial class Material
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
