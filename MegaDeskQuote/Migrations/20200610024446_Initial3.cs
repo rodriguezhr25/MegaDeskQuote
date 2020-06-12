@@ -2,7 +2,7 @@
 
 namespace MegaDeskQuote.Migrations
 {
-    public partial class RushDay : Migration
+    public partial class Initial3 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
