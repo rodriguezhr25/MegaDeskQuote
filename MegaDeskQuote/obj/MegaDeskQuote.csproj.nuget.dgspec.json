@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Administrador\\Documents\\cit365\\MegaDeskQuote\\MegaDeskQuote\\MegaDeskQuote.csproj": {}
+    "D:\\lefi\\Documents\\cit365\\week08\\MegaDeskQuote\\MegaDeskQuote\\MegaDeskQuote.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Administrador\\Documents\\cit365\\MegaDeskQuote\\MegaDeskQuote\\MegaDeskQuote.csproj": {
+    "D:\\lefi\\Documents\\cit365\\week08\\MegaDeskQuote\\MegaDeskQuote\\MegaDeskQuote.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Administrador\\Documents\\cit365\\MegaDeskQuote\\MegaDeskQuote\\MegaDeskQuote.csproj",
+        "projectUniqueName": "D:\\lefi\\Documents\\cit365\\week08\\MegaDeskQuote\\MegaDeskQuote\\MegaDeskQuote.csproj",
         "projectName": "MegaDeskQuote",
-        "projectPath": "C:\\Users\\Administrador\\Documents\\cit365\\MegaDeskQuote\\MegaDeskQuote\\MegaDeskQuote.csproj",
-        "packagesPath": "C:\\Users\\Administrador\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Administrador\\Documents\\cit365\\MegaDeskQuote\\MegaDeskQuote\\obj\\",
+        "projectPath": "D:\\lefi\\Documents\\cit365\\week08\\MegaDeskQuote\\MegaDeskQuote\\MegaDeskQuote.csproj",
+        "packagesPath": "C:\\Users\\lefi\\.nuget\\packages\\",
+        "outputPath": "D:\\lefi\\Documents\\cit365\\week08\\MegaDeskQuote\\MegaDeskQuote\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Administrador\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\lefi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -67,12 +67,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[3.1.2, 3.1.2]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -81,7 +75,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

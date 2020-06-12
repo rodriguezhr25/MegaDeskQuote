@@ -74,7 +74,7 @@ namespace MegaDeskQuote.Pages.DeskQuotes
             decimal TotalSizeDesk = DeskQuote.TotalSize;
 
             switch (DeskQuote.RushDay)
-
+            //switch (cost1)
             {
                 case 3:
 

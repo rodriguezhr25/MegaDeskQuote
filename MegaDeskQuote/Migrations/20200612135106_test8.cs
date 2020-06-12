@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace MegaDeskQuote.Migrations
 {
-    public partial class Initial : Migration
+    public partial class test8 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -20,9 +20,11 @@ namespace MegaDeskQuote.Migrations
                     CostSize = table.Column<decimal>(type: "decimal(18, 2)", nullable: false),
                     TotalSize = table.Column<decimal>(type: "decimal(18, 2)", nullable: false),
                     SizeOverage = table.Column<decimal>(type: "decimal(18, 2)", nullable: false),
+                    Drawers = table.Column<int>(nullable: false),
                     DrawerCost = table.Column<decimal>(type: "decimal(18, 2)", nullable: false),
                     Material = table.Column<string>(nullable: true),
                     MaterialCost = table.Column<decimal>(type: "decimal(18, 2)", nullable: false),
+                    RushDay = table.Column<int>(nullable: false),
                     ShippingMethod = table.Column<string>(nullable: true),
                     ShippingCost = table.Column<decimal>(type: "decimal(18, 2)", nullable: false),
                     Total = table.Column<decimal>(type: "decimal(18, 2)", nullable: false)
