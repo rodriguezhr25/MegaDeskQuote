@@ -35,7 +35,10 @@ namespace MegaDeskQuote.Pages.DeskQuotes
             {
                 return Page();
             }
+
+            //calculate the rest of values from input user
             DeskQuote.TotalSize = DeskQuote.Width * DeskQuote.Depth;
+           
 
             //
             int cost = 0;
@@ -68,6 +71,8 @@ namespace MegaDeskQuote.Pages.DeskQuotes
 
                     break;
             }
+
+            DeskQuote.MaterialCost = cost;
 
             int cost1 = 0;
 
@@ -122,10 +127,16 @@ namespace MegaDeskQuote.Pages.DeskQuotes
                     DeskQuote.ShippingMethod = "Normal";
                     break;
             }
+            DeskQuote.DrawerCost = DeskQuote.Drawers * 50;
+            DeskQuote.ShippingCost = cost1;
 
-            //return cost1;
+            DeskQuote.Total = cost + cost1 + DeskQuote.DrawerCost;
 
-        
+
+ 
+            //---------------
+
+
             _context.DeskQuote.Add(DeskQuote);
                 await _context.SaveChangesAsync();
 
