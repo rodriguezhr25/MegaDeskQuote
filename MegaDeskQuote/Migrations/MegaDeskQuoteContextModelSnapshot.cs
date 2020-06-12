@@ -52,6 +52,9 @@ namespace MegaDeskQuote.Migrations
                     b.Property<decimal>("MaterialCost")
                         .HasColumnType("decimal(18, 2)");
 
+                    b.Property<int>("RushDay")
+                        .HasColumnType("int");
+
                     b.Property<decimal>("ShippingCost")
                         .HasColumnType("decimal(18, 2)");
 
