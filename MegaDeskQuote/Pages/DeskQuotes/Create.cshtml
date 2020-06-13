@@ -9,17 +9,15 @@
 
 <h4>DeskQuote</h4>
 <hr />
-<div class="polaroid rotate_right">
-<img id="idImg" src="../../images/blackboard.jpg" width="300" height="300" name="myImage" alt="Img Material Type" hidden />
-</div>
-<div class="row">
-    <div class="col-md-12">
+
+
+
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="row">
-                <div class="col-md-4">                    
+                <div class="col-md-4">
                     @*<img id="idImg" src="../../images/blackboard.jpg" width="300" height="300" name="myImage"  alt="Img Material Type"  hidden/>*@
-                    
+
                     <div class="form-group">
                         <label asp-for="DeskQuote.Customer" class="control-label"></label>
                         <input asp-for="DeskQuote.Customer" class="form-control" />
@@ -46,6 +44,8 @@
                         <span asp-validation-for="DeskQuote.Drawers" class="text-danger"></span>
                     </div>
                     <!-- New Feature-->
+
+
                     <div class="form-group">
                         <label asp-for="DeskQuote.Material" class="control-label"></label>
                         <select id="idTMaterials" onChange="showImage()" asp-for="DeskQuote.Material" asp-items="Html.GetEnumSelectList<MegaDeskQuote.Models.DeskQuote.TMaterials>()" class="form-control">
@@ -64,59 +64,22 @@
 
 
                 </div>
-
-
-                @*<div class="col-md-4">*@
-
-
-
-                    @*<div class="form-group">
-                        <label asp-for="DeskQuote.CostSize" class="control-label"></label>
-                        <input asp-for="DeskQuote.CostSize" class="form-control" />
-                        <span asp-validation-for="DeskQuote.CostSize" class="text-danger"></span>
-                    </div>
-                    <div class="form-group">
-                        <label asp-for="DeskQuote.TotalSize" class="control-label"></label>
-                        <input asp-for="DeskQuote.TotalSize" class="form-control" />
-                        <span asp-validation-for="DeskQuote.TotalSize" class="text-danger"></span>
-                    </div>
-                    <div class="form-group">
-                        <label asp-for="DeskQuote.SizeOverage" class="control-label"></label>
-                        <input asp-for="DeskQuote.SizeOverage" class="form-control" />
-                        <span asp-validation-for="DeskQuote.SizeOverage" class="text-danger"></span>
-                    </div>
-                    <div class="form-group">
-                        <label asp-for="DeskQuote.DrawerCost" class="control-label"></label>
-                        <input asp-for="DeskQuote.DrawerCost" class="form-control" />
-                        <span asp-validation-for="DeskQuote.DrawerCost" class="text-danger"></span>
+                <div class="col-md-4" id="containerImg" hidden>
+                    <div class="polaroid ">
+                        <img id="idImg" class="" src="../../images/blackboard.jpg" width="300" height="300" name="myImage" alt="Img Material Type" hidden />
                     </div>
 
-                    <div class="form-group">
-                        <label asp-for="DeskQuote.MaterialCost" class="control-label"></label>
-                        <input asp-for="DeskQuote.MaterialCost" class="form-control" />
-                        <span asp-validation-for="DeskQuote.MaterialCost" class="text-danger"></span>
-                    </div>
-
-                    <div class="form-group">
-                        <label asp-for="DeskQuote.ShippingCost" class="control-label"></label>
-                        <input asp-for="DeskQuote.ShippingCost" class="form-control" />
-                        <span asp-validation-for="DeskQuote.ShippingCost" class="text-danger"></span>
-                    </div>
-                    <div class="form-group">
-                        <label asp-for="DeskQuote.Total" class="control-label"></label>
-                        <input asp-for="DeskQuote.Total" class="form-control" />
-                        <span asp-validation-for="DeskQuote.Total" class="text-danger"></span>
-                    </div>*@
+                </div>
+               
             </div>
-                    <div class="form-group">
-                        <input type="submit" value="Create" class="btn btn-primary" />
-                        <a class="btn btn-warning" asp-page="Index">Back to List</a>
-                    </div>
-                @*</div>*@
-            
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+                <a class="btn btn-warning" asp-page="Index">Back to List</a>
+            </div>          
+
         </form>
-    </div>
-</div>
+
+
 
 
 @section Scripts {

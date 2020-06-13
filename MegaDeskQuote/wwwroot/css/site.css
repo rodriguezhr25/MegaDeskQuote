@@ -128,21 +128,30 @@ th, td {
 
 
 div.polaroid {
-    width: 310px;
-    padding: 10px 10px 20px 10px;
-    border: 1px solid #BFBFBF;
-    background-color: white;
-    box-shadow: 10px 10px 5px #aaaaaa;
-    margin-top: 6.5rem;
-    height: auto;
-}
+   /* width: 50%;*/
+    padding: 0.5rem;
+    border: 2px dashed #BFBFBF;    
+    margin-top: 6rem;
 
-div.rotate_right {
+}
+#idImg{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+@media (max-width: 600px) {
+ div.polaroid{
+     margin: 20px 0;
+
+ }
+   
+}
+/*div.rotate_right {
     float: left;
-    -ms-transform: rotate(7deg); /* IE 9 */
-    -webkit-transform: rotate(7deg); /* Safari */
+    -ms-transform: rotate(7deg); 
+    -webkit-transform: rotate(7deg); 
     transform: rotate(7deg);
-    /*float: right;*/
+    float: right;
     margin-right: -50px;
     text-align: center;
-}
+}*/
