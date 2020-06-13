@@ -37,8 +37,8 @@ namespace MegaDeskQuote.Migrations
                     b.Property<DateTime>("DateQuote")
                         .HasColumnType("datetime2");
 
-                    b.Property<decimal>("Depth")
-                        .HasColumnType("decimal(18, 2)");
+                    b.Property<int>("Depth")
+                        .HasColumnType("int");
 
                     b.Property<decimal>("DrawerCost")
                         .HasColumnType("decimal(18, 2)");
@@ -67,11 +67,11 @@ namespace MegaDeskQuote.Migrations
                     b.Property<decimal>("Total")
                         .HasColumnType("decimal(18, 2)");
 
-                    b.Property<decimal>("TotalSize")
-                        .HasColumnType("decimal(18, 2)");
+                    b.Property<int>("TotalSize")
+                        .HasColumnType("int");
 
-                    b.Property<decimal>("Width")
-                        .HasColumnType("decimal(18, 2)");
+                    b.Property<int>("Width")
+                        .HasColumnType("int");
 
                     b.HasKey("ID");
 

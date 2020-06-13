@@ -55,14 +55,15 @@
                             @Html.DisplayNameFor(model => model.DeskQuote[0].Depth)
                         </th>
                         <th>
-                            @Html.DisplayNameFor(model => model.DeskQuote[0].CostSize)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.DeskQuote[0].TotalSize)
+                            @Html.DisplayNameFor(model => model.DeskQuote[0].TotalSize) in<sup>2</sup>
                         </th>
                         <th>
                             @Html.DisplayNameFor(model => model.DeskQuote[0].SizeOverage)
                         </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.DeskQuote[0].CostSize)
+                        </th>
+
                         <th>
                             @Html.DisplayNameFor(model => model.DeskQuote[0].DrawerCost)
                         </th>
@@ -103,13 +104,13 @@
                             @Html.DisplayFor(modelItem => item.Depth)
                         </td>
                         <td>
-                            @Html.DisplayFor(modelItem => item.CostSize)
-                        </td>
-                        <td>
                             @Html.DisplayFor(modelItem => item.TotalSize)
                         </td>
                         <td>
                             @Html.DisplayFor(modelItem => item.SizeOverage)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.CostSize)
                         </td>
                         <td>
                             @Html.DisplayFor(modelItem => item.DrawerCost)
@@ -133,7 +134,7 @@
                         <td>
 
                             @{ var imagePath = "";
-                                imagePath = @"images\" + item.Material +"Small.jpg";
+                                imagePath = @"images\" + item.Material + "Small.jpg";
                             }
 
                             <img src="@imagePath" width="70" height="70" name="myImage" class="img-thumbnail" alt="Img Material Type" />

@@ -38,9 +38,21 @@ namespace MegaDeskQuote.Pages.DeskQuotes
 
             //calculate the rest of values from input user
             DeskQuote.TotalSize = DeskQuote.Width * DeskQuote.Depth;
-           
 
             //
+
+            if (DeskQuote.TotalSize > 1000)
+            {
+                DeskQuote.CostSize = (DeskQuote.TotalSize - 1000) +200;
+                DeskQuote.SizeOverage = DeskQuote.TotalSize - 1000;
+            }
+
+            else DeskQuote.CostSize = DeskQuote.TotalSize + 200;
+            //DeskQuote.CostSize = (DeskQuote.TotalSize - 1000) + 200;  
+
+            
+
+                //
             int cost = 0;
             switch (DeskQuote.Material)
                 
@@ -130,7 +142,7 @@ namespace MegaDeskQuote.Pages.DeskQuotes
             DeskQuote.DrawerCost = DeskQuote.Drawers * 50;
             DeskQuote.ShippingCost = cost1;
 
-            DeskQuote.Total = cost + cost1 + DeskQuote.DrawerCost;
+            DeskQuote.Total = cost + cost1 + DeskQuote.DrawerCost + DeskQuote.CostSize;
 
 
  
