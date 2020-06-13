@@ -18,7 +18,7 @@
             <div class="col-sm-4">
                 <div class="input-group">
                     <div class="input-group-append">
-                        <input type="text" name="SearchCustomer" class="form-control" placeholder="Book" value="@Model.CustomerFilter" />
+                        <input type="text" name="SearchCustomer" class="form-control" placeholder="Quotes" value="@Model.CustomerFilter" />
                     </div>
                     <button type="submit" class="btn btn-success">Filter</button>
 
@@ -38,7 +38,7 @@
                     <tr>
                         <th>
                             <a asp-page="./Index" asp-route-sortOrder="@Model.NameSort"
-                               asp-route-customerFilter="@Model.CustomerFilter" >
+                               asp-route-customerFilter="@Model.CustomerFilter">
                                 @Html.DisplayNameFor(model => model.DeskQuote[0].Customer)
                             </a>
                         </th>
@@ -55,14 +55,15 @@
                             @Html.DisplayNameFor(model => model.DeskQuote[0].Depth)
                         </th>
                         <th>
-                            @Html.DisplayNameFor(model => model.DeskQuote[0].CostSize)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.DeskQuote[0].TotalSize)
+                            @Html.DisplayNameFor(model => model.DeskQuote[0].TotalSize) in<sup>2</sup>
                         </th>
                         <th>
                             @Html.DisplayNameFor(model => model.DeskQuote[0].SizeOverage)
                         </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.DeskQuote[0].CostSize)
+                        </th>
+
                         <th>
                             @Html.DisplayNameFor(model => model.DeskQuote[0].DrawerCost)
                         </th>
@@ -80,6 +81,9 @@
                         </th>
                         <th>
                             @Html.DisplayNameFor(model => model.DeskQuote[0].Total)
+                        </th>
+                        <th>
+                            Material Type
                         </th>
                         <th></th>
                     </tr>
@@ -100,13 +104,13 @@
                             @Html.DisplayFor(modelItem => item.Depth)
                         </td>
                         <td>
-                            @Html.DisplayFor(modelItem => item.CostSize)
-                        </td>
-                        <td>
                             @Html.DisplayFor(modelItem => item.TotalSize)
                         </td>
                         <td>
                             @Html.DisplayFor(modelItem => item.SizeOverage)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.CostSize)
                         </td>
                         <td>
                             @Html.DisplayFor(modelItem => item.DrawerCost)
@@ -126,6 +130,16 @@
                         <td>
                             @Html.DisplayFor(modelItem => item.Total)
                         </td>
+
+                        <td>
+
+                            @{ var imagePath = "";
+                                imagePath = @"images\" + item.Material + "Small.jpg";
+                            }
+
+                            <img src="@imagePath" width="70" height="70" name="myImage" class="img-thumbnail" alt="Img Material Type" />
+                        </td>
+
                         <td>
                             <a class="btn btn-primary" asp-page="./Edit" asp-route-id="@item.ID">Edit</a>
                             <a class="btn btn-info" asp-page="./Details" asp-route-id="@item.ID">Details</a>

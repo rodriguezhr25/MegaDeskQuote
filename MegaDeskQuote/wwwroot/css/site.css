@@ -125,3 +125,24 @@ th, td {
     background-color: #ff6a00;
     color: #ffffff;
 }
+
+
+div.polaroid {
+    width: 310px;
+    padding: 10px 10px 20px 10px;
+    border: 1px solid #BFBFBF;
+    background-color: white;
+    box-shadow: 10px 10px 5px #aaaaaa;
+    margin-top: 6.5rem;
+    height: auto;
+}
+
+div.rotate_right {
+    float: left;
+    -ms-transform: rotate(7deg); /* IE 9 */
+    -webkit-transform: rotate(7deg); /* Safari */
+    transform: rotate(7deg);
+    /*float: right;*/
+    margin-right: -50px;
+    text-align: center;
+}

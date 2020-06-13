@@ -36,6 +36,7 @@ namespace MegaDeskQuote.Pages.DeskQuotes
             {
                 return NotFound();
             }
+    
             return Page();
         }
 
@@ -52,6 +53,119 @@ namespace MegaDeskQuote.Pages.DeskQuotes
 
             try
             {
+
+                //calculate the rest of values from input user
+                DeskQuote.TotalSize = DeskQuote.Width * DeskQuote.Depth;
+
+                //
+
+                if (DeskQuote.TotalSize > 1000)
+                {
+                    DeskQuote.CostSize = (DeskQuote.TotalSize - 1000) + 200;
+                    DeskQuote.SizeOverage = DeskQuote.TotalSize - 1000;
+                }
+
+                else DeskQuote.CostSize = DeskQuote.TotalSize + 200;
+                //DeskQuote.CostSize = (DeskQuote.TotalSize - 1000) + 200;  
+
+
+
+                //
+                int cost = 0;
+                switch (DeskQuote.Material)
+
+                {
+                    case DeskQuote.TMaterials.Oak:
+
+                        cost = 200;
+
+                        break;
+                    case DeskQuote.TMaterials.Laminate:
+
+                        cost = 100;
+
+                        break;
+                    case DeskQuote.TMaterials.Pine:
+
+                        cost = 50;
+
+                        break;
+                    case DeskQuote.TMaterials.Rosewood:
+
+                        cost = 300;
+
+                        break;
+                    case DeskQuote.TMaterials.Veneer:
+
+                        cost = 125;
+
+                        break;
+                }
+
+                DeskQuote.MaterialCost = cost;
+
+                int cost1 = 0;
+
+                decimal TotalSizeDesk = DeskQuote.TotalSize;
+
+                switch (DeskQuote.RushDay)
+                //switch (cost1)
+                {
+                    case DeskQuote.OptShipping.Three:
+
+                        if (TotalSizeDesk < 1000)
+
+                            cost1 = 60;
+
+                        else if (TotalSizeDesk < 2001)
+                            cost1 = 70;
+
+                        else cost1 = 80;
+
+                        DeskQuote.ShippingMethod = "3 Days";
+
+                        break;
+                    case DeskQuote.OptShipping.Five:
+
+                        if (TotalSizeDesk < 1000)
+
+                            cost1 = 40;
+
+                        else if (TotalSizeDesk < 2001)
+                            cost1 = 50;
+
+                        else cost1 = 60;
+
+                        DeskQuote.ShippingMethod = "5 Days";
+                        break;
+                    case DeskQuote.OptShipping.Seven:
+
+                        if (TotalSizeDesk < 1000)
+
+                            cost1 = 30;
+
+                        else if (TotalSizeDesk < 2001)
+                            cost1 = 35;
+
+                        else cost1 = 40;
+
+                        DeskQuote.ShippingMethod = "7 Days";
+                        break;
+                    case DeskQuote.OptShipping.Fourteen:
+
+                        cost1 = 0;
+                        DeskQuote.ShippingMethod = "Normal";
+                        break;
+                }
+                DeskQuote.DrawerCost = DeskQuote.Drawers * 50;
+                DeskQuote.ShippingCost = cost1;
+
+                DeskQuote.Total = cost + cost1 + DeskQuote.DrawerCost + DeskQuote.CostSize;
+
+
+
+                //---------------
+
                 await _context.SaveChangesAsync();
             }
             catch (DbUpdateConcurrencyException)
@@ -65,6 +179,10 @@ namespace MegaDeskQuote.Pages.DeskQuotes
                     throw;
                 }
             }
+
+
+            
+
 
             return RedirectToPage("./Index");
         }
