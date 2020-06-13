@@ -9,15 +9,17 @@
 
 <h4>DeskQuote</h4>
 <hr />
+<div class="polaroid rotate_right">
+<img id="idImg" src="../../images/blackboard.jpg" width="300" height="300" name="myImage" alt="Img Material Type" hidden />
+</div>
 <div class="row">
     <div class="col-md-12">
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="row">
-                <div class="col-md-4">
-
-                    <img id="idImg" src="../../images/blackboard.jpg" width="300" height="300" name="myImage" class="rounded-circle float-left" alt="Img Material Type" />
-
+                <div class="col-md-4">                    
+                    @*<img id="idImg" src="../../images/blackboard.jpg" width="300" height="300" name="myImage"  alt="Img Material Type"  hidden/>*@
+                    
                     <div class="form-group">
                         <label asp-for="DeskQuote.Customer" class="control-label"></label>
                         <input asp-for="DeskQuote.Customer" class="form-control" />

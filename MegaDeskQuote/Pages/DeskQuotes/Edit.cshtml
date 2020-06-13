@@ -4,77 +4,77 @@
 @{
     ViewData["Title"] = "Edit";
 }
+    <body onload="showImage()">
+        <h1>Edit</h1>
 
-<h1>Edit</h1>
-
-<h4>DeskQuote</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form method="post">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="DeskQuote.ID" />
+        <h4>DeskQuote</h4>
+        <hr />
+        <div class="row">
+            <div class="col-md-4">
+                <form method="post">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <input type="hidden" asp-for="DeskQuote.ID" />
 
 
 
-            <img id="idImg" src="../../images/blackboard.jpg" width="300" height="300" name="myImage" class="rounded-circle float-left" alt="Img Material Type" />
+                    <img id="idImg" src="../../images/blackboard.jpg" width="300" height="300" name="myImage" class="rounded-circle float-left" alt="Img Material Type" />
 
-            <div class="form-group">
-                <label asp-for="DeskQuote.Customer" class="control-label"></label>
-                <input asp-for="DeskQuote.Customer" class="form-control" />
-                <span asp-validation-for="DeskQuote.Customer" class="text-danger"></span>
+                    <div class="form-group">
+                        <label asp-for="DeskQuote.Customer" class="control-label"></label>
+                        <input asp-for="DeskQuote.Customer" class="form-control" />
+                        <span asp-validation-for="DeskQuote.Customer" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="DeskQuote.DateQuote" class="control-label"></label>
+                        <input asp-for="DeskQuote.DateQuote" class="form-control" />
+                        <span asp-validation-for="DeskQuote.DateQuote" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="DeskQuote.Width" class="control-label"></label>
+                        <input asp-for="DeskQuote.Width" class="form-control" />
+                        <span asp-validation-for="DeskQuote.Width" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="DeskQuote.Depth" class="control-label"></label>
+                        <input asp-for="DeskQuote.Depth" class="form-control" />
+                        <span asp-validation-for="DeskQuote.Depth" class="text-danger"></span>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label asp-for="DeskQuote.Drawers" class="control-label"></label>
+                        <input asp-for="DeskQuote.Drawers" class="form-control" />
+                        <span asp-validation-for="DeskQuote.Drawers" class="text-danger"></span>
+                    </div>
+
+
+                    <!-- New Feature-->
+                    <div class="form-group">
+                        <label asp-for="DeskQuote.Material" class="control-label"></label>
+                        <select id="idTMaterials" onChange="showImage()" asp-for="DeskQuote.Material" asp-items="Html.GetEnumSelectList<MegaDeskQuote.Models.DeskQuote.TMaterials>()" class="form-control">
+                            <option selected="selected" value="">Please select</option>
+                        </select>
+                        <span asp-validation-for="DeskQuote.Material" class="text-danger" />
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="DeskQuote.RushDay" class="control-label"></label>
+                        <select asp-for="DeskQuote.RushDay" asp-items="Html.GetEnumSelectList<MegaDeskQuote.Models.DeskQuote.OptShipping>()" class="form-control">
+                            <option selected="selected" value="">Please select</option>
+                        </select>
+                        <span asp-validation-for="DeskQuote.RushDay" class="text-danger" />
+                    </div>
+
+
+                    <div class="form-group">
+                        <input type="submit" value="Save" class="btn btn-primary" />
+                        <a class="btn btn-warning" asp-page="./Index">Back to List</a>
+                    </div>
+                </form>
             </div>
-            <div class="form-group">
-                <label asp-for="DeskQuote.DateQuote" class="control-label"></label>
-                <input asp-for="DeskQuote.DateQuote" class="form-control" />
-                <span asp-validation-for="DeskQuote.DateQuote" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="DeskQuote.Width" class="control-label"></label>
-                <input asp-for="DeskQuote.Width" class="form-control" />
-                <span asp-validation-for="DeskQuote.Width" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="DeskQuote.Depth" class="control-label"></label>
-                <input asp-for="DeskQuote.Depth" class="form-control" />
-                <span asp-validation-for="DeskQuote.Depth" class="text-danger"></span>
-            </div>
+        </div>
+    </body>
 
-
-            <div class="form-group">
-                <label asp-for="DeskQuote.Drawers" class="control-label"></label>
-                <input asp-for="DeskQuote.Drawers" class="form-control" />
-                <span asp-validation-for="DeskQuote.Drawers" class="text-danger"></span>
-            </div>
-
-
-            <!-- New Feature-->
-            <div class="form-group">
-                <label asp-for="DeskQuote.Material" class="control-label"></label>
-                <select id="idTMaterials" onChange="showImage()" asp-for="DeskQuote.Material" asp-items="Html.GetEnumSelectList<MegaDeskQuote.Models.DeskQuote.TMaterials>()" class="form-control">
-                    <option selected="selected" value="">Please select</option>
-                </select>
-                <span asp-validation-for="DeskQuote.Material" class="text-danger" />
-            </div>
-
-            <div class="form-group">
-                <label asp-for="DeskQuote.RushDay" class="control-label"></label>
-                <select asp-for="DeskQuote.RushDay" asp-items="Html.GetEnumSelectList<MegaDeskQuote.Models.DeskQuote.OptShipping>()" class="form-control">
-                    <option selected="selected" value="">Please select</option>
-                </select>
-                <span asp-validation-for="DeskQuote.RushDay" class="text-danger" />
-            </div>
-
-
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
-                <a class="btn btn-warning" asp-page="./Index">Back to List</a>
-            </div>
-        </form>
-    </div>
-</div>
-
-
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}
+        @section Scripts {
+            @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+        }

@@ -11,4 +11,6 @@
 function showImage() {
     d = $("#idTMaterials option:selected").text();
     document.getElementById("idImg").src = "../../images/" + d + "Big.jpg";
+    document.getElementById("idImg").removeAttribute("hidden"); 
 }
+
