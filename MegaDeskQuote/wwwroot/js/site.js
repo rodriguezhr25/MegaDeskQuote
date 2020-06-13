@@ -9,8 +9,15 @@
 
 
 function showImage() {
-    d = $("#idTMaterials option:selected").text();
-    document.getElementById("idImg").src = "../../images/" + d + "Big.jpg";
-    document.getElementById("idImg").removeAttribute("hidden"); 
+    var material = $('#idTMaterials').val();
+    if (material != "") {
+        d = $("#idTMaterials option:selected").text();
+        document.getElementById("idImg").src = "../../images/" + d + "Big.jpg";
+        document.getElementById("idImg").removeAttribute("hidden");
+        document.getElementById("containerImg").removeAttribute("hidden");
+    } else {
+        document.getElementById("containerImg").setAttribute("hidden", true);
+        document.getElementById("idImg").setAttribute("hidden", true);
+    }
 }
 
