@@ -18,13 +18,13 @@ namespace MegaDeskQuote.Models
 
         //
         [Range(24, 96)]
-        [Column(TypeName = "decimal(18, 2)")]
-        public decimal Width { get; set; }
+        //[Column(TypeName = "int(18, 0)")]
+        public int Width { get; set; }
 
         //
-        [Range(12, 24)]
-        [Column(TypeName = "decimal(18, 2)")]
-        public decimal Depth { get; set; }
+        [Range(12, 48)]
+        //[Column(TypeName = "int(18, 0)")]
+        public int Depth { get; set; }
 
         //
         [Display(Name = "Cost Size"), DataType(DataType.Currency)]
@@ -33,8 +33,8 @@ namespace MegaDeskQuote.Models
 
         //
         [Display(Name = "Total Size")]
-        [Column(TypeName = "decimal(18, 2)")]
-        public decimal TotalSize { get; set; }
+        //[Column(TypeName = "int(18, 0)")]
+        public int TotalSize { get; set; }
 
         //
         [Display(Name = "Size Overage")]
@@ -44,31 +44,59 @@ namespace MegaDeskQuote.Models
         //
         [Range(0, 7)]
         public int Drawers { get; set; }
-        [Display(Name = "DrawerCost")]
-        [Column(TypeName = "decimal(18, 2)")]
 
-        //
+
+        [Display(Name = "DrawerCost"), DataType(DataType.Currency)]
+        [Column(TypeName = "decimal(18, 2)")]        
         public decimal DrawerCost { get; set; }
 
         //
-        public string Material { get; set; }
+        //public string Material { get; set; }
+
         [Display(Name = "Material Cost"), DataType(DataType.Currency)]
         [Column(TypeName = "decimal(18, 2)")]
 
         //
-        public decimal MaterialCost { get; set; }
+        public decimal MaterialCost { get; set; } 
+
+
         [Display(Name = "Shipping Method ")]
-
-
-        public int RushDay { get; set; }
-        //
+        
         public string ShippingMethod { get; set; }
+
+
+        //
         [Display(Name = "Shipping Cost") , DataType(DataType.Currency)]
         [Column(TypeName = "decimal(18, 2)")]
-
-        //
         public decimal ShippingCost { get; set; }
+
+        [Display(Name = "Total"), DataType(DataType.Currency)]
         [Column(TypeName = "decimal(18, 2)")]
         public decimal Total { get; set; }
+
+        //type of materials enumerated
+        [EnumDataType(typeof(TMaterials))]
+        public TMaterials Material { get; set; }
+        public enum TMaterials
+        {
+            Oak = 1,
+            Laminate = 2,
+            Pine = 3,
+            Rosewood = 4,
+            Veneer = 5
+        }
+
+
+        //rush order days
+        [EnumDataType(typeof(OptShipping))]
+        public OptShipping RushDay { get; set; }
+        public enum OptShipping
+        {
+            Three = 3,
+            Five = 5,
+            Seven = 7,
+            Fourteen = 14
+        }
+
     }
 }
